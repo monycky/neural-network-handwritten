@@ -11,7 +11,7 @@ clf = MLPClassifier(solver='lbfgs', hidden_layer_sizes=(30, 30))
 clf.fit(x_train, y_train)
 
 for i in range(10):
-    img = cv2.imread('C:/Users/monycky_vasconcelos/Documents/projects/ann-handwritten/images/%d.png' % i, 0)
+    img = cv2.imread('../images/%d.png' % i, 0)
     res = cv2.resize(img, dsize=(28, 28), interpolation=cv2.INTER_CUBIC)
     res = res.reshape((28 * 28))
 
